@@ -1,7 +1,6 @@
 /**
  * @description Bootcamp - Week 3 - Day 4 - Daily Challenge: Todo list
  * 
- * 
  * @author Yao Kan KOUASSI
  * @date 2023-01-10
  */
@@ -61,6 +60,10 @@ function addTask(e) {
     }
 }
 
+/**
+ * Mark a task as completed
+ * @param {Event} e Checkbox element change event
+ */
 function doneTask(e) {
     let div = e.target.closest('.task-item')
     let label = div.querySelector('label')
@@ -76,6 +79,10 @@ function doneTask(e) {
     }
 }
 
+/**
+ * Delete a task from the tasks list
+ * @param {Event} e Button element click event
+ */
 function deleteTask(e) {
     let div = e.target.closest('.task-item')
     tasks.splice(parseInt(div.dataset.taskId), 1, null)
@@ -84,8 +91,10 @@ function deleteTask(e) {
         document.querySelector('.listTasks').innerHTML = '<i>No task</i>'
 }
 
+// Attach event handlers
 document.forms[0].addEventListener('submit', addTask)
 document.querySelector('button[type=submit]').addEventListener('click', addTask)
+// Remove all tasks
 document.querySelector('#clear-all-tasks').addEventListener('click', () => {
     if(!document.querySelectorAll('.task-item').length) return
     if(confirm('Are you sure you want to clear all tasks?')) {
