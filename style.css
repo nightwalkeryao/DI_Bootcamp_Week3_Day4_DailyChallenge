@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background-image: linear-gradient(180deg, #ff494d 0%, #ff5c7d);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container {
+  height: 100vh;
+  width: 40vw;
+  padding: 1rem;
+  margin-inline: auto;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+button {
+  cursor: pointer;
+}
+form {
+  margin: 1rem 0;
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow-y: hidden;
+}
+.input-group > *,
+#clear-all-tasks {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 6px 16px;
+}
+#text {
+  width: 90%;
+  font-size: 11pt;
+}
+button[type="submit"] {
+  color: #07a8f3;
+  font-size: 14pt;
+  font-weight: 300;
+}
+.tasks {
+  padding: 24px;
+  background-color: #fff;
+}
+.list-bottom {
+  text-align: right;
+}
+#clear-all-tasks {
+  color: #ff494d;
+}
+.clear-task {
+  background-color: #ff494d;
+  color: #fff;
+  font-size: 10pt;
+  border: none;
+  outline: none;
+}
+.task-item{
+	padding: 8px;
+	border-bottom: 1px solid #07a8f3;
+}
+.task-item label {
+	font-size: 14pt;
+	opacity: 0.65;
+}
